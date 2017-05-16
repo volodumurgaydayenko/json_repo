@@ -20,3 +20,4 @@ def get_db():
 if __name__ == '__main__':
     print('server_db', 'Vova', 'q1q2w3r4')
     app.run(debug=False)
+# coment
