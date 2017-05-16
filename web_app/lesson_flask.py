@@ -1,11 +1,20 @@
-from flask import Flask, jsonify, request
+import shelve
+from flask import Flask
+
+with shelve.open('shelve.db') as db:
+    db['_meta'] = {'filename': 'shelve.db'}
+
+with shelve.open('shelve.db') as db:
+    print(db['_meta'])
 
 app = Flask(__name__)
+
+# dbname =
 
 
 @app.route('/db/get', methods=['GET'])
 def get_db():
-    return jsonify
+    return
 
 
 if __name__ == '__main__':
